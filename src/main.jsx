@@ -9,7 +9,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import Root, {
     loader as rootLoader,
     action as rootAction,  // This action will be called when the route changes. It's useful for triggering side effects (like fetching data) when a route is entered.
-} from "./routes/Root.jsx";
+} from "./routes/root.jsx";
 import AdminRoot, {
     loader as adminRootLoader,
 } from "./routes/admin/adminRoot.jsx";
