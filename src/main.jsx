@@ -43,6 +43,9 @@ import EditCardCategory from "./routes/teacher/cardCategory/cardCategoryEdit.jsx
 import EditCategoryTask from "./routes/teacher/taskCategory/taskCategoryEdit.jsx";
 import EditDifficultyLevel from "./routes/teacher/difficultyLevel/difficultyLevelEdit.jsx";
 import TeacherUserCards from "./routes/teacher/user/UserCards.jsx";
+import ClassAdd from "./routes/teacher/class/classAdd.jsx";
+import ClassRoot from "./routes/teacher/class/classRoot.jsx";
+import ClassEdit from "./routes/teacher/class/classEdit.jsx";
 
 
 const router = createBrowserRouter([
@@ -126,6 +129,18 @@ const router = createBrowserRouter([
     {
         path: "/teacher/difficulty_level/:levelId/edit",
         element: <EditDifficultyLevel/>,
+    },
+    {
+        path: "/teacher/class",
+        element: <ClassRoot/>
+    },
+    {
+        path: "/teacher/class/add",
+        element: <ClassAdd/>,
+    },
+    {
+        path: "/teacher/class/:classId/edit",
+        element: <ClassEdit/>,
     },
     {
         path: "/teacher/card",

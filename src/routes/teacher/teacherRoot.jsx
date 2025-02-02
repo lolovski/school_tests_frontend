@@ -54,6 +54,9 @@ export default function TeacherRoot() {
                     <Form action='user'>
                         <button className='m-3' type="submit">Управление учениками</button>
                     </Form>
+                    <Form action='class'>
+                        <button className='m-3' type="submit">Управление классами</button>
+                    </Form>
                     <button className='m-3' onClick={handleLogout}>Выйти</button>
                 </div>
             </div>

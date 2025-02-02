@@ -4,8 +4,8 @@ import axios from 'axios';
 class ClassService {
     baseURL = 'http://localhost:8000/class';
 
-    async getClasses(school_id) {
-        const {data} = await axios.get(`${this.baseURL}es/${school_id}`);
+    async getClasses() {
+        const {data} = await axios.get(`${this.baseURL}/`);
         return data;
     }
 
@@ -32,17 +32,6 @@ class ClassService {
     }
     async deleteClass(id) {
         await axios.delete(`${this.baseURL}/${id}`)
-    }
-
-    async getSheduleSystems(school_id){
-        const {response} = await axios.get(
-            'http://localhost:8000/school/schedule_system',
-            {
-                params: {school_id},
-                withCredentials: true,
-            }
-            )
-        return response;
     }
 }
 const classService = new ClassService();
