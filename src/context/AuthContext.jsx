@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import authService from '../services/auth.service';
+import Sidebar from "../components/UI/Sidebar.jsx";
 
 const AuthContext = createContext(null);
 
@@ -59,6 +60,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
       <AuthContext.Provider value={{ user, login, logout, register, checkAuth, loading }}>
+
         {children}
       </AuthContext.Provider>
   );

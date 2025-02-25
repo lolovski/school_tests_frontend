@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useNavigation } from "react-router-dom";
 import taskService from "../../../services/task.service.jsx";
-import { BackButton } from "../../../components/UI/buttons/BackButton.jsx";
+import {BackButton, HomeButton} from "../../../components/UI/buttons/BackButton.jsx";
 import taskCategoryService from "../../../services/taskCategory.service.jsx";
 import {useAuth} from "../../../context/AuthContext.jsx";
 
@@ -74,7 +74,7 @@ export default function UserTasksRoot() {
 
             <div className='m-10 flex'>
                 <div className="w-3/4 pr-5">
-                    <BackButton/>
+                    <HomeButton/>
                     <h1 className="text-sky-600 text-5xl font-medium pb-5">Задания</h1>
                     <input
                         type="text"

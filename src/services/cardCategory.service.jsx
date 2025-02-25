@@ -22,7 +22,7 @@ class CardCategoryService {
 
     async createCardCategory(data) {
 
-        const {response} = await axios.post(this.baseURL,
+        const response = await axios.post(this.baseURL,
             data,
             {
                 withCredentials: true,
@@ -30,7 +30,7 @@ class CardCategoryService {
                     'Content-Type': 'application/json',
                 }
             })
-        return response;
+        return response.data;
     }
     async updateCardCategory(id, updates) {
         const {data} = await axios.patch(`${this.baseURL}/${id}`,updates)

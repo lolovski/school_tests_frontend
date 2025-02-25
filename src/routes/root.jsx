@@ -14,6 +14,7 @@ import authService from "../services/auth.service.jsx";
 import getWeek from '../utils/Week.jsx';
 import { useAuth } from "../context/AuthContext.jsx";
 import { useEffect } from "react";
+import RootCards from "../components/UI/rootCards.jsx";
 
 export async function loader() {
     return null;
@@ -54,35 +55,10 @@ export default function Root() {
             >
                 <Outlet />
             </div>
-            <div className='m-10'>
-                <h1 className="text-sky-600 text-5xl font-medium pb-10">OurJournal</h1>
-                <div className='border-l-2 border-sky-400 pl-3 py-3 dark:text-white font-medium bg-green-50/5 w-60 rounded-lg'>
-                    {user !== null ? (
-                        <>
-                            <Form action='tasks'>
-                                <button className='m-3' type="submit">Задания</button>
-                            </Form>
-                            <Form action='cards'>
-                                <button className='m-3' type="submit">Карточки</button>
-                            </Form>
-                            <Form action='profile'>
-                                <button className='m-3' type="submit">Профиль</button>
-                            </Form>
-                            <button className='m-3' onClick={handleLogout}>Выйти</button>
+            <div className=''>
+                <h1 className="text-sky-600 text-5xl font-medium m-10">SchoolTests</h1>
+                <RootCards user={user}/>
 
-
-                        </>
-                    ) : (
-                        <>
-                            <Form action='login'>
-                                <button className='m-3' type="submit">Войти</button>
-                            </Form>
-                            <Form action='registration'>
-                                <button className='m-3' type="submit">Регистрация</button>
-                            </Form>
-                        </>
-                    )}
-                </div>
             </div>
         </>
     );
