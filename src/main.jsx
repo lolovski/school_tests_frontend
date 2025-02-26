@@ -54,8 +54,8 @@ import ProblemRoot, { loader as problemRootLoader } from "./routes/teacher/probl
 import ProblemAdd, { action as problemAddAction, loader as problemAddLoader } from "./routes/teacher/problem/ProblemAdd.jsx";
 import ProblemEdit from "./routes/teacher/problem/ProblemEdit.jsx";
 import ProblemResults from "./routes/teacher/problem/ProblemResults.jsx";
-import ProblemsRoot, { loader as problemsRootLoader } from "./routes/user/problems/ProblemsRoot.jsx";
-import ProblemProgress, { loader as problemProgressLoader } from "./routes/user/problems/ProblemProgress.jsx";
+import ProblemsRoot, { loader as problemsRootLoader } from "./routes/user/problems/problemsRoot.jsx";
+import ProblemProgress, { loader as problemProgressLoader } from "./routes/user/problems/problemProgress.jsx";
 import Logout from "./routes/user/logout.jsx";
 
 const router = createBrowserRouter([
