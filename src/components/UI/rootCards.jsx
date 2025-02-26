@@ -1,6 +1,6 @@
 // src/components/RootCards.jsx
 import React from 'react';
-import './RootCards.css';
+import './rootCards.css';
 import {Form, Link} from "react-router-dom";
 import {TaskList} from "iconoir-react/regular"; // Импорт стилей
 
